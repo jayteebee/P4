@@ -4,7 +4,7 @@
 
 This app allows users to simulate trading stocks with "fake" or "paper" money. The purpose is to provide a risk-free environment for novice traders to learn about investing and experienced traders to test new strategies.
 
-## Rails API with React Front-End
+### Rails API with React Front-End
 
 API: https://rapidapi.com/alphavantage/api/alpha-vantage
 
