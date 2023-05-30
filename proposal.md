@@ -186,10 +186,11 @@ Models
 ### Relationships
 
 ```ruby
-    class User < ApplicationRecord
+  class User < ApplicationRecord
   has_many :watchlists
   has_many :user_stocks
   has_many :stocks, through: :user_stocks
+	has_many :trades
 end
 
 class Stock < ApplicationRecord
@@ -197,6 +198,7 @@ class Stock < ApplicationRecord
   has_many :watchlists, through: :watchlist_stocks
   has_many :user_stocks
   has_many :users, through: :user_stocks
+	has_many :trades
 end
 
 class UserStock < ApplicationRecord
@@ -217,13 +219,7 @@ end
 
 class Trade < ApplicationRecord
 	belongs_to :user	
-	has_many :trade_users
-	has_many :users, through: :trade_users
-	has_many :stocks
-	
-end
-
-class TradeUser < ApplicationRecord
+	belongs_to :stock
 	
 end
 ```
